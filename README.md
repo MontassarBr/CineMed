@@ -1,4 +1,4 @@
-Certainly! Here's the **updated `README.md` for CineMed** with the **Screenshots section removed**, keeping everything else clean and professional:
+Certainly! Here's the updated `README.md` with a **🌐 Live Demo** section added. Just replace the placeholder link with your actual GitHub Pages or deployment URL.
 
 ---
 
@@ -10,6 +10,11 @@ Certainly! Here's the **updated `README.md` for CineMed** with the **Screenshots
 ## 📘 Overview
 
 **CineMed** is a dynamic web platform designed for cinema enthusiasts. It provides an intuitive user experience for discovering the latest movies, viewing trailers, and reserving tickets directly through the website. The platform was developed as part of an academic project to explore animation techniques, responsive design, and user interface interactions.
+
+## 🌐 Live Demo
+
+Check out the live version of CineMed here:  
+👉 [https://MontassarBr.github.io/CineMed](https://MontassarBr.github.io/CineMed)
 
 ## 🎯 Key Features
 
@@ -56,7 +61,7 @@ cd CineMed
 * Viewport-triggered fade-ins and zooms
 * Sticky navigation with active state
 * Easing and smooth scrolling
-* Shader-like background effects
+* Shader-like background effects 
 
 
 ## 📄 License
