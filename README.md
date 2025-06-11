@@ -72,11 +72,8 @@ cd CineMed
 * Viewport-triggered fade-ins and zooms
 * Sticky navigation with active state
 * Easing and smooth scrolling
-* Shader-like background effects *(if applied)*
+* Shader-like background effects 
 
-## 👨‍💻 Author
-
-* **Montassar Braiek**
 
 ## 📄 License
 
