@@ -1,4 +1,16 @@
-Certainly! Here's the updated `README.md` with a **🌐 Live Demo** section added. Just replace the placeholder link with your actual GitHub Pages or deployment URL.
+Perfect! Here’s the updated **Live Demo** section with your actual link:
+
+---
+
+```markdown
+## 🌐 Live Demo
+
+👉 [Visit CineMed Live](https://montassarbr.github.io/CineMed/)
+```
+
+---
+
+If you'd like the full `README.md` updated with this link already included, here it is:
 
 ---
 
@@ -42,7 +54,7 @@ Certainly! Here's the updated `README.md` with a **🌐 Live Demo** section adde
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/CineMed.git
+git clone https://github.com/montassarbr/CineMed.git
 cd CineMed
 
 # 2. Open the site
@@ -60,8 +72,11 @@ cd CineMed
 * Viewport-triggered fade-ins and zooms
 * Sticky navigation with active state
 * Easing and smooth scrolling
-* Shader-like background effects 
+* Shader-like background effects *(if applied)*
 
+## 👨‍💻 Author
+
+* **Montassar Braiek**
 
 ## 📄 License
 
