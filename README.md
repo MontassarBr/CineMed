@@ -13,8 +13,7 @@ Certainly! Here's the updated `README.md` with a **🌐 Live Demo** section adde
 
 ## 🌐 Live Demo
 
-Visit the live version of CineMed:  
-👉 [https://montassarbr.github.io/CineMed/](https://montassarbr.github.io/CineMed/)
+👉 [Visit CineMed Live](https://montassarbr.github.io/CineMed/)
 
 ## 🎯 Key Features
 
