@@ -1,0 +1,370 @@
+/* Movies Page Styles */
+
+.movies-container {
+  padding-top: 120px;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.page-description {
+  color: var(--cinema-text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Filters */
+.movies-filters {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--cinema-text-secondary);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 48px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--cinema-text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--cinema-accent);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+.search-input::placeholder {
+  color: var(--cinema-text-secondary);
+}
+
+.genre-tabs {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.genre-tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.genre-tab {
+  padding: 8px 16px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--cinema-text);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.genre-tab:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.genre-tab.active {
+  background-color: var(--cinema-accent);
+  color: var(--cinema-dark);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--cinema-text-secondary);
+  margin: 0 auto 1.5rem;
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.empty-description {
+  color: var(--cinema-text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Movie Rating Labels */
+.rating-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.rating-pg {
+  background-color: #60a5fa;
+  color: #0c2d6b;
+}
+
+.rating-pg13 {
+  background-color: #c084fc;
+  color: #4c1d95;
+}
+
+.rating-r {
+  background-color: #f87171;
+  color: #7f1d1d;
+}
+
+/* Trailer Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex; 
+}
+
+.modal-content {
+  background-color: #1e1e1e; 
+  color: #f1f1f1;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--cinema-primary);
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#trailer-content iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  border: none;
+}
+
+/* Notification Styles */
+.notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification {
+  background-color: #333; 
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 0.5s forwards, fadeOut 0.5s 4.5s forwards; 
+}
+
+.notification.success {
+  background-color: #28a745; 
+  color: white;
+}
+
+.notification.error {
+  background-color: #dc3545; 
+  color: white;
+}
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Movie Details Styles */
+.movie-details {
+  background-color: var(--cinema-secondary);
+  border-radius: 8px;
+  padding: 2rem 0;
+}
+
+.movie-details-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.details-poster {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.details-text {
+  flex: 2 1 300px;
+  color: var(--cinema-text);
+}
+
+.details-text h1 {
+  font-size: 2.5rem;
+  color: var(--cinema-primary);
+  margin-bottom: 1rem;
+}
+
+.details-text h2 {
+  font-size: 1.2rem;
+  color: var(--cinema-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-text p {
+  color: var(--cinema-text-secondary);
+  line-height: 1.6;
+}
+
+.details-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-text ul li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 0.5rem;
+  color: var(--cinema-text-secondary);
+}
+
+.details-text ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--cinema-accent);
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .movie-details-wrapper {
+    flex-direction: column;
+  }
+  .details-poster {
+    max-width: 100%;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .genre-tabs {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .empty-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .empty-title {
+    font-size: 1.25rem;
+  }
+}

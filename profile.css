@@ -1,0 +1,434 @@
+/* Profile Page Specific Styles */
+.profile-page {
+  padding: 100px 0 60px;
+}
+
+/* Profile Header */
+.profile-header {
+  margin-bottom: 40px;
+}
+
+.profile-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--cinema-secondary);
+  flex-shrink: 0;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.profile-email {
+  color: var(--cinema-text-secondary);
+  margin-bottom: 5px;
+}
+
+.profile-membership {
+  font-size: 14px;
+  color: var(--cinema-text-secondary);
+}
+
+.edit-profile-btn {
+  margin-left: auto;
+}
+
+/* Profile Tabs */
+.profile-tabs {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: hidden;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  color: var(--cinema-text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  color: white;
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--cinema-accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
+}
+
+/* Tab Content */
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Tickets Tab */
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.ticket-card {
+  height: 100%;
+}
+
+.ticket-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ticket-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--cinema-secondary);
+  margin-bottom: 16px;
+}
+
+.ticket-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ticket-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.ticket-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ticket-detail .detail-label {
+  font-size: 14px;
+  color: var(--cinema-text-secondary);
+  margin-bottom: 2px;
+}
+
+.ticket-detail .detail-value {
+  font-weight: 500;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.ticket-qr {
+  height: 80px;
+  width: 80px;
+  background: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.ticket-qr img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Watchlist Tab */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.movie-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--cinema-secondary);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.movie-poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-poster img {
+  transform: scale(1.1);
+}
+
+.movie-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--cinema-overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.remove-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  align-self: flex-end;
+}
+
+.details-btn {
+  background-color: var(--cinema-accent);
+  color: var(--cinema-dark);
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.movie-info {
+  padding: 12px;
+}
+
+.movie-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-year {
+  font-size: 14px;
+  color: var(--cinema-text-secondary);
+}
+
+/* Purchase History Tab */
+.history-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 12px 16px;
+  color: var(--cinema-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.completed {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+/* Account Settings Tab */
+.settings-form {
+  max-width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--cinema-text-secondary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--cinema-accent);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.form-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--cinema-accent);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .edit-profile-btn {
+    margin-left: 0;
+  }
+  
+  .profile-tabs {
+    justify-content: flex-start;
+  }
+  
+  .tickets-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ticket-content {
+    flex-direction: column;
+  }
+  
+  .ticket-poster {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+}
