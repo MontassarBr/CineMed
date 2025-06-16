@@ -1,0 +1,427 @@
+/* About Page Styles */
+
+/* Keyframe Animations */
+@keyframes slideInUp { 
+  from { transform: translateY(50px); opacity: 0; } 
+  to { transform: translateY(0); opacity: 1; } 
+}
+
+@keyframes zoomIn { 
+  from { transform: scale(0.9); opacity: 0; } 
+  to { transform: scale(1); opacity: 1; } 
+}
+
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
+
+/* Animation Utility Classes */
+.animate-slide-up {
+  animation: slideInUp 0.8s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.6s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+/* Staggered Animation Delays */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 3s; }
+.delay-6 { animation-delay: 1s; }
+
+/* About Hero Section */
+.about-hero {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1470&auto=format&fit=crop') no-repeat center center;
+  background-size: cover;
+  margin-top: 70px;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  /* Removed fade-in class, will apply animation class directly */
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  color: var(--cinema-text-secondary);
+  /* Removed fade-in class, will apply animation class directly */
+}
+
+/* About Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image {
+  /* Removed fade-in class, will apply animation class directly */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--cinema-text);
+}
+
+.about-content {
+ /* Removed fade-in class, will apply animation class directly */
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Vision & Mission Section */
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.vision-box, .mission-box {
+  /* Removed fade-in class, will apply animation class directly */
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.vision-box:hover, .mission-box:hover {
+  transform: translateY(-5px);
+}
+
+.vision-icon, .mission-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  margin: 0 auto 30px;
+  background-color: var(--cinema-accent);
+  border-radius: 50%;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: var(--cinema-dark);
+}
+
+.vision-box h2, .mission-box h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.vision-box p, .mission-box p {
+  font-size: 1.1rem;
+  color: var(--cinema-text-secondary);
+}
+
+/* Features Section */
+.text-center {
+  text-align: center;
+}
+
+.mb-large {
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  /* Removed fade-in class, will apply animation class directly */
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width: 64px;
+  margin: 0 auto 20px;
+  background-color: var(--cinema-accent);
+  border-radius: 50%;
+}
+
+.feature-svg {
+  width: 32px;
+  height: 32px;
+  color: var(--cinema-dark);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.feature-card p {
+  color: var(--cinema-text-secondary);
+}
+
+/* Team Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.team-member {
+  /* Removed fade-in class, will apply animation class directly */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-photo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--cinema-accent);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.team-role {
+  color: var(--cinema-accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.team-bio {
+  color: var(--cinema-text-secondary);
+}
+
+/* Contact Section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.contact-info {
+  /* Removed fade-in class, will apply animation class directly */
+}
+
+.contact-info > p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--cinema-text);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--cinema-accent);
+  flex-shrink: 0;
+}
+
+.contact-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.contact-item p {
+  color: var(--cinema-text-secondary);
+}
+
+.contact-form-container {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 40px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: white;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--cinema-accent);
+  box-shadow: 0 0 0 2px rgba(255,215,0,0.2);
+}
+
+.contact-form {
+  /* Removed fade-in class, will apply animation class directly */
+}
+
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+/* Rounded Image Helper */
+.rounded-image {
+  border-radius: 12px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 400px;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-grid,
+  .vision-mission-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .about-content h2,
+  .contact-info h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 300px;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .vision-box, .mission-box,
+  .contact-form-container {
+    padding: 25px;
+  }
+  
+  .team-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
