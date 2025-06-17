@@ -1,20 +1,3 @@
-Perfect! Here’s the updated **Live Demo** section with your actual link:
-
----
-
-```markdown
-## 🌐 Live Demo
-
-👉 [Visit CineMed Live](https://montassarbr.github.io/CineMed/)
-```
-
----
-
-If you'd like the full `README.md` updated with this link already included, here it is:
-
----
-
-````markdown
 # 🎬 CineMed – Cinema Website Platform
 
 > A modern and interactive cinema web application that allows users to browse movies, watch trailers, and book tickets online.
